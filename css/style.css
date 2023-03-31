@@ -1,0 +1,38 @@
+.container{
+    margin: 20px;
+    grid-template-rows: repeat(9, 300px);
+    grid-template-columns: 90vw;
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    direction: rtl;
+}
+img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(211, 211, 211, 0.473);
+}
+@media screen and (min-width:768px){
+    .container{
+        margin: 20px;
+        grid-template-rows: repeat(5, 200px);
+        grid-template-columns: 45vw 45vw;
+
+    }
+}
+@media screen and (min-width: 1024px){
+    .container{
+        margin: 20px;
+        grid-template-rows: repeat(3, 200px);
+        grid-template-columns: 30vw 30vw 30vw;
+    
+    }
+    .container :first-child{
+        grid-column: 1 / span 2;
+        grid-row: 1 /span 2;
+    }
+    
+}
